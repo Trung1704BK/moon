@@ -1,0 +1,51 @@
+<div class="page-header" data-parallax="true" style="background-image: url('https://hampervietnam.vn/wp-content/uploads/2021/06/tet-trung-thu-nhat-ban-1.jpeg');');">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+            <h1>WELCOME TO JAPAN</h1>
+            <br/>
+            <a href="https://www.youtube.com/watch?v=jEbFocfsVl0" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Watch video</a>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="mt-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mr-auto ml-auto">
+                    <h3 class="title">JAPAN MOONLIGHT FESTIVAL</h3>
+                    <h5 class="description">Tsukimi, Mid-Autumn Festival in Japan
+                        Tsukimi, or Otsukimi is a traditional festival with a long history, considered as the Mid-Autumn Festival or Moon Festival in Japan. It falls on 15th day of 8th lunar month. The traditional customs on that day include appreciating the full moon, eating Tsukimi Dango, decorating house with pampas grass and flowers, etc... However, the customs of the festival are not kept well nowadays, and many young people do not celebrate this festival.</h5>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="container mt-5">
+                <h4>INTRODUCE MOONLIGHT FESTIVAL</h4>
+                <div class="row mt-2">
+                    <div *ngFor="let d of data1" class="col-lg-4 mt-3">
+                        <div class="card-body btn-round btn-default">
+                            <a href='http://localhost:4200/#/viewdetailjapan/{{d.id}}' class=' btn-sm mt-5'>
+                                <img src="{{d.image}}" style="width: 300px; height: 70px; object-fit:cover">
+                                <div style="text-align: end"><h3 style="color: black; font-weight: bold" class="mt-2 mb-2">{{d.title}}</h3></div>
+<!--                                <div style="text-align: start"><h5 style="font-weight: 500; color: black">{{d.introduce}}</h5></div>-->
+                                <div style="font-size: 16px; width: 100%; text-align: end"> Read more...</div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

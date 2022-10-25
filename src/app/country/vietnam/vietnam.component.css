@@ -1,0 +1,20 @@
+.box{
+    padding: 10px 10px;
+    background-color: #b9b7b7;
+}
+
+.box h5{
+    font-size: 16px;
+    font-weight: bold;
+}
+.fix_element{
+
+}
+
+/*.btn-danger1:focus*/
+/*{*/
+/*    color:#fff;*/
+/*    background-color: #bbeea1;*/
+/*    border-color: #efcfab;*/
+/*    box-shadow:0 0 0 .2rem rgb(190, 154, 111)*/
+/*}*/

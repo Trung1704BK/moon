@@ -1,0 +1,71 @@
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="0">
+    <div style="padding: 15px 0;" class="container">
+        <div *ngIf="isAuthenticated" class="navbar-translate">
+            <a class="navbar-logo navbar-brand" href="#home">
+                <span class="navbar-logo-text">MOONLIGHT</span>
+            </a>
+            <button class=" navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div  class="navbar-collapse" id="navbarToggler">
+            <ul *ngIf="isAuthenticated" class="navbar-nav ml-auto">
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" [routerLink]="['vietnam']">
+                        Viet Nam
+                    </a>
+                </li>
+
+                <li  class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" [routerLink]="['china']">
+                        china
+                    </a>
+                </li>
+
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" [routerLink]="['japan']">
+                        japan
+                    </a>
+                </li>
+
+                <li   class="nav-item" *ngIf="!isDocumentation()">
+                    <a style=" margin: 9px 0 0px 0" class="nav-link" rel="tooltip" [routerLink]="['/search']">
+                        <i  style="font-size: 20px;" _ngcontent-c10="" class="nc-icon nc-zoom-split"></i>
+                    </a>
+                </li>
+              
+                <li class="nav-item" >
+                    <a class="nav-link logout"  mat-button (click)="onLogout()" *ngIf="isAuthenticated">Logout</a>
+                </li>
+
+
+
+                <!-- <li   class="nav-item" *ngIf="!isDocumentation()">
+                    <a style=" margin: 9px 0 0px 0" class="nav-link" rel="tooltip" >
+                        <span *ngIf="!
+                        isAuthenticated" (click)="onLogout()" ><h3 >Logout</h3></span>
+                    </a>
+                </li>
+                <a *ngIf="isAuthenticated" (click)="onLogout()" ><h3 >Logout</h3></a> -->
+
+<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+<!--                    <a class="nav-link" rel="tooltip" [routerLink]="['/signup']">-->
+<!--                        Signup-->
+<!--                    </a>-->
+<!--                </li>-->
+
+                <div class="couter" *ngIf="!isDocumentation()">
+                    <a class="navbar-brand" [routerLink]=""
+                    ><i class="fa fa-eye"></i>{{ value?.value }}</a
+                    >
+                </div>
+            </ul>
+           
+            
+        </div>
+    </div>
+</nav>
+

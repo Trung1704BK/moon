@@ -1,0 +1,104 @@
+<style>
+
+        @media only screen and (max-width: 667px) {
+            .a1 {
+                background-color: black;
+                height: 100px;
+                width: 100%;
+            }
+            .fix1{
+                height: 580px !important;
+                width: 270px !important;
+            }
+            .fix2{
+                display: flex !important;
+                margin: auto !important;
+                width: 250px !important;
+                height: 200px !important;
+                object-fit: cover !important;
+            }
+            .fix3{
+                height: 75px !important;
+                width: 250px !important;
+            }
+            .fix4{
+                overflow: auto !important;
+                width: 230px !important;
+                height: 200px !important;
+            }
+            .fix5{
+                display: flex !important;
+                width: 116px !important;
+                margin: 0 auto !important;
+            }
+
+
+        }
+
+    @media only screen and (min-width: 601px) {
+        .a1 {
+            background-color: black;
+            height: 130px;
+        }
+    }
+
+
+
+        /*style="width: 600px"*/
+
+    </style>
+
+<div class="page-header section-dark" style="object-fit: cover;background-image: url('https://theperfectmediagroup.com/wp-content/uploads/2020/09/Chinatown-Mid-Autumn-Celebration-2.jpg')">
+    <!--        <div class="filter"></div>-->
+    <div class="content-center">
+        <div class="container">
+            <div class="title-brand">
+                <h1 class="presentation-title">MOONLIGHT</h1>
+            </div>
+            <h2 style="font-weight: 600" class="presentation-subtitle text-center">SEARCH INFORMATION YOU WANT</h2>
+        </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
+</div>
+<!--search-->
+<div class="container section">
+    <div><h3 style="margin: 0 auto; font-weight: 500">Let's find interesting knowledge about the moonlight festival</h3></div>
+    <br>
+
+    <div class="row">
+        <div class="col-12">
+            <input style="width: 300px;" [(ngModel)]="searchText" class="form-control" placeholder="Search..." aria-label="Search">
+        </div>
+    </div>
+
+<!--data-->
+<div>
+    <div class="row mt-5 between1 ">
+        <div class="col-6 between2 mt-3" *ngFor="let a of heroes|filter:searchText">
+            <div style="height: 580px; width: 500px;"  class="card fix1 ">
+                <img style="display: flex; margin: auto; width: 480px; height:300px; object-fit: cover" class="card-img-top fix2" src="{{a.img}}">
+                <div class="card-body">
+                    <h5 style="height: 45px; width: 480px; font-weight: 600" class="card-title fix3">{{a.title}}</h5>
+                    <!--                    <div style="overflow: auto; width: 260px; height: 200px" >{{a.country}}</div>-->
+
+                    <div style="overflow: auto; width: 470px; height: 100px; " class="fix4">{{a.content}}</div>
+                    <br>
+                    <a style="display: flex; width: 116px; margin: 0 auto; font-size: 18px" class="  my-2 my-sm-0 fix5" [routerLink]="['/viewmainweb']">Readmore...</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<!--<div class="btn_fix" style="padding: 20px 0 10px 0; margin: 0 auto ; " >-->
+<!--    <a style="display: flex; " class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/viewmainweb']">Readmore</a>-->
+<!--</div>-->
+
+

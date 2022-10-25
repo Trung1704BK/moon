@@ -1,0 +1,47 @@
+uo-show:hover
+{
+    z-index: 9999 !important;
+}
+@media only screen and (max-width: 600px) {
+    .card:hover{
+        z-index: 1000;
+        display: block;
+    }
+    /*.btn_fix{*/
+    /*    max-width: 40%;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 600px) {
+    .card:hover{
+        z-index: 1000;
+        display: block;
+    }
+}
+
+    @media only screen and (max-width: 667px) {
+    /*.between1{*/
+    /*    text-align: center ;*/
+    /*}*/
+    .between2{
+        margin: 0 auto 0 35px;
+    }
+        .between3{
+            margin: 0 auto 0 25px;
+        }
+}
+
+@media only screen and (max-width: 280px) {
+    /*.between1{*/
+    /*    text-align: center ;*/
+    /*}*/
+    .between2{
+        margin: 0 auto 0 0px;
+    }
+    .between3{
+        margin: 0 auto 0 0px;
+        width: 150px !important;
+    }
+
+}
+

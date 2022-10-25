@@ -1,0 +1,351 @@
+*, ::after ::before {
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #777777;
+    background-attachment: fixed;
+    position: relative;
+    line-height: 20px;
+}
+
+.footer-bgr {
+    padding-top: 32px;
+}
+
+.footer-logo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: url(https://www.nicepng.com/png/full/233-2337833_this-graphics-is-mid-autumn-moon-about-mid.png);
+    //: url(https://www.freeiconspng.com/thumbs/moon-png/moon-png-no-background-15.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    //display: flex;
+    margin: auto;
+    margin-left: 10px;
+    max-width: 100%;
+}
+
+.footer-logo-text {
+    font-family: Moonlight;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+    left: 100%;
+}
+
+.footer_title {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 24px 0 6px 0;
+    border-bottom: 3px solid #F3F2EE;
+}
+
+.footer-logo .footer-clouds-1,
+.footer-logo .footer-clouds-2,
+.footer-logo .footer-clouds-3 {
+    position: absolute;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25%;
+    opacity: 0.3;
+}
+
+.footer-logo .footer-clouds-1 {
+    animation: cloudLoop 10s linear infinite 4s;
+    top: 20%;
+}
+
+.footer-logo .footer-clouds-1.right {
+    opacity: 0.7;
+    animation: none;
+    margin-left: 20%;
+    top: 25%;
+}
+
+.footer-logo .footer-clouds-2 {
+    animation: cloudLoop 16s linear infinite 2s;
+    top: 75%;
+    margin-left: 20%;
+}
+
+.footer-logo .footer-clouds-3 {
+    animation: cloudLoop 10s linear infinite;
+    top: 85%;
+    margin-right: 30%;
+}
+
+.footer-logo .footer-clouds-3.right {
+    opacity: 0.7;
+    animation: none;
+}
+
+.footer .footer-nav .phone {
+    display: flex;
+    text-align: center;
+}
+.footer-nav {
+    width: 33.333%;
+}
+.footer-nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+.footer-nav > ul > li {
+    padding: 10px 15px;
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+}
+
+.btn-feedback {
+    font-weight: 600;
+}
+
+.footer-nav > ul a:not(.btn,.btn-feedback) {
+    color: white;
+    margin-bottom: 3px;
+    line-height: 1.6;
+    opacity: 1;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.footer-nav > ul a:not(.btn):hover,
+.footer-nav > ul a:not(.btn):focus {
+    color: #f7d204;
+    opacity: 1;
+}
+
+.footer-map {
+    width: 384px;
+    height: 228px;
+    border: 0;
+}
+
+.footer .copyright {
+    color: white;
+    padding: 10px 0px;
+    font-size: 14px;
+    margin: auto;
+    line-height: 20px;
+    text-align: center;
+}
+.footer .heart{
+    color: #EB5E28;
+}
+
+.credits {
+    display: flex;
+    text-align: center;
+    //padding: 10px;
+}
+.footer {
+    background-color: $black-color;
+    line-height: $line-height;
+
+    &.footer-black{
+        h4{
+            color: $white-color;
+        }
+    }
+
+    .links{
+        display: inline-block;
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-weight: $font-weight-bold;
+
+            > li{
+                display: inline-block;
+                padding-right: 20px;
+            }
+            > li:last-child{
+                padding-right: 0px;
+            }
+
+            a:not(.btn){
+                color: $font-color;
+                // display: block;
+                font-size: $font-size-h6;
+                margin-bottom: 3px;
+                &:hover,
+                &:focus{
+                    color: $default-states-color;
+                }
+            }
+
+            &.uppercase-links{
+                text-transform: uppercase;
+            }
+            &.stacked-links{
+                margin-top: 10px;
+
+                > li{
+                    display: block;
+                    line-height: 26px;
+                }
+                h4{
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    hr{
+        border-color: $medium-gray;
+        border-width: 1px 0 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .copyright{
+        color: $brown-font-color;
+        font-size: 0.9em;
+        ul > li{
+            padding-right: 0px;
+        }
+    }
+    .title{
+        color: $default-states-color;
+    }
+}
+
+.footer-black,
+.footer-transparent{
+    background-color: $black-footer-bg;
+    color: $medium-gray;
+
+    .links ul{
+        a:not(.btn){
+            color: $brown-font-color;
+            &:hover,
+            &:focus{
+                color: $brown-font-color-hover;
+            }
+        }
+    }
+    .copyright {
+        color: $font-color;
+        ul > li{
+            a:not(.btn){
+                color: $font-color;
+            }
+        }
+    }
+
+    hr{
+        border-color: $font-color;
+    }
+}
+.footer-transparent{
+    background-size: cover;
+    position: relative;
+
+    .container{
+        z-index: 2;
+        position: relative;
+    }
+    hr{
+        border-color: $brown-font-color;
+    }
+    .copyright {
+        color: $brown-font-color;
+        ul > li a:not(.btn){
+            color: $brown-font-color;
+        }
+    }
+
+    &::after{
+        @include black-filter(.5);
+    }
+}
+.footer-gray{
+    background-color: #F3F2EE;
+}
+.footer-big{
+    padding: 30px 0;
+    hr{
+        margin-top: 20px;
+    }
+    .copyright{
+        margin: 10px 0px 20px;
+    }
+    .form-group{
+        margin-top: 15px;
+    }
+}
+
+// pre-footers lines
+.subscribe-line{
+    background-color: $pale-bg;
+    padding: 35px 0;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0;
+
+    .form-group{
+        margin: $none;
+    }
+    .form-control{
+        height: auto;
+        font-size: $font-size-h3;
+        border: $none;
+        padding: $none;
+        font-weight: $font-weight-light;
+        line-height: $line-height-lg;
+        background-color: $transparent-bg;
+    }
+
+    .btn:not(.btn-lg){
+        margin-top: 7px;
+    }
+}
+
+.subscribe-line-black{
+    background-color: $black-footer-bg;
+    .form-control{
+        color: $white-color;
+    }
+}
+
+.subscribe-line-transparent{
+    @extend .footer-transparent;
+    .form-control{
+        color: $white-color;
+    }
+}
+
+.social-line-black{
+    background-color: $black-footer-bg;
+    color: $white-color;
+}
+
+@media screen and (max-width: 414px) {
+    .row {
+        flex-direction: column;
+    }
+    .footer-logo {
+        margin-top: 20px;
+    }
+    .footer-logo-text {
+        font-size: 14px;
+    }
+    .footer-logo {
+        width: 100px;
+        height: 100px;
+    }
+}
